@@ -1,6 +1,6 @@
 {
-  "name": "kanji-memo",
-  "homepage": "https://seanhli.github.io/kanji-memo",
+  "name": "seanhli.github.io",
+  "homepage": "https://seanhli.github.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
