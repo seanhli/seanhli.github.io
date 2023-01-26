@@ -1,0 +1,33 @@
+:root {
+  --bg-dark: rgb(18, 20, 26);
+  --inv-dark: 1;
+}
+
+.footer {
+  position: absolute;
+  display: flex;
+  right: max(40px, 2vw);
+  bottom: max(30px, 3vh);
+  height: max(40px, 4vh);
+}
+
+.footer-item:not(:first-child) {
+  margin-left: max(25px, 1.5vw);
+}
+
+.footer-icon {
+  height: 100%;
+  width: auto;
+  filter: invert(var(--inv-dark)) grayscale(1);
+}
+
+.footer-icon:hover {
+  animation: scaledown-dark 3s infinite ease;
+}
+
+@keyframes scaledown-dark {
+  50% {
+    transform: scale(0.8);
+    filter: invert(var(--inv-dark)) grayscale(1) drop-shadow(0px 0px max(10px, 2vh) rgb(255, 255, 255));
+  }
+}

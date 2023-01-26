@@ -1,0 +1,35 @@
+:root {
+  --bg-dark: rgb(18, 20, 26);
+  --inv-dark: 1;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #c4c3ca;
+  background-color: var(--bg-dark);
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+main {
+  position: absolute;
+  top: 7.5vh;
+  left: max(4vw, 9vh);
+  right: max(4vw, 9vh);
+  height: 85vh;
+}
