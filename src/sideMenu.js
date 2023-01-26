@@ -21,6 +21,7 @@ function SideMenu() {
             onClick={() => toggleMenu(openMenu)}
             className="menu-icon"
           />
+          <div className="menu-tag">menu</div>
         </div>
       )}
       {openMenu && (
@@ -39,11 +40,6 @@ function SideMenu() {
             className="menu-bar-line"
           />
           <div className="menu-item">
-            {/* <img
-              src={require("./assets/diamond-color.png")}
-              alt="temp"
-              className="diamond-holder"
-            /> */}
             <img
               src={require("./assets/about-me-color.png")}
               alt="about me"
@@ -57,11 +53,6 @@ function SideMenu() {
             className="menu-bar-line"
           />
           <div className="menu-item">
-            {/* <img
-              src={require("./assets/diamond-color.png")}
-              alt="temp"
-              className="diamond-holder"
-            /> */}
             <img
               src={require("./assets/experiences-color.png")}
               alt="experiences"
@@ -75,11 +66,6 @@ function SideMenu() {
             className="menu-bar-line"
           />
           <div className="menu-item">
-            {/* <img
-              src={require("./assets/diamond-color.png")}
-              alt="temp"
-              className="diamond-holder"
-            /> */}
             <img
               src={require("./assets/projects-color.png")}
               alt="projects"

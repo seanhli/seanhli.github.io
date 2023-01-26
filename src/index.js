@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 import "./css/main.css";
 import "./css/sideMenu.css";
 import "./css/footer.css";
+import "./css/lightswitch.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

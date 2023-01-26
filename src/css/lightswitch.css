@@ -1,0 +1,50 @@
+.light-switch-container {
+    position: absolute;
+    right: max(20px, 1.5vw);
+    top: min(-9vh, -70px);
+}
+
+.dm-moon {
+    height: max(22vh, 180px);
+    width: max(6vw, 60px);
+}
+
+.dm-strings {
+    position: relative;
+    height: 80%;
+    width: 55%;
+    left: 50%;
+    margin-left: -27.5%;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    opacity: 0.3;
+}
+
+.moon {
+    position: relative;
+    left: 50%;
+    margin-left: -40%;
+    margin-top: -50%;
+    width: 80%;
+    height: auto;
+    filter: invert(1);
+}
+
+.dm-moon:hover {
+    animation: sway 6s infinite linear;
+}
+
+@keyframes sway {
+    25% {
+        transform: rotateY(-30deg) rotateZ(-4deg);
+        transform-origin: 10% left;
+    }
+    75% {
+        transform: rotateY(30deg) rotateZ(4deg);
+        transform-origin: 10% left;
+    }
+}
+
+.dm-moon:hover > .moon {
+    filter: invert(1) drop-shadow(0px 0px max(6px, 1vh) rgb(255, 255, 255));
+}
