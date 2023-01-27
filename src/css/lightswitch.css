@@ -34,6 +34,43 @@
     animation: sway 6s infinite linear;
 }
 
+.dm-moon:hover > .moon {
+    filter: invert(1) drop-shadow(0px 0px max(6px, 1vh) rgb(255, 255, 255));
+}
+
+.lm-sun {
+    height: max(22vh, 180px);
+    width: max(6vw, 60px);
+}
+
+.lm-strings {
+    position: relative;
+    height: 80%;
+    width: 55%;
+    left: 50%;
+    margin-left: -27.5%;
+    border-left: 1px solid rgb(0, 0, 0);
+    border-right: 1px solid rgb(0, 0, 0);
+    opacity: 0.3;
+}
+
+.sun {
+    position: relative;
+    left: 50%;
+    margin-left: -50%;
+    margin-top: -50%;
+    width: 100%;
+    height: auto;
+}
+
+.lm-sun:hover {
+    animation: sway 6s infinite linear;
+}
+
+.lm-sun:hover > .sun {
+    filter: drop-shadow(0px 0px max(6px, 1vh) rgb(0, 0, 0));
+}
+
 @keyframes sway {
     25% {
         transform: rotateY(-30deg) rotateZ(-4deg);
@@ -43,8 +80,4 @@
         transform: rotateY(30deg) rotateZ(4deg);
         transform-origin: 10% left;
     }
-}
-
-.dm-moon:hover > .moon {
-    filter: invert(1) drop-shadow(0px 0px max(6px, 1vh) rgb(255, 255, 255));
 }

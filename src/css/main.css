@@ -1,6 +1,6 @@
 :root {
   --bg-dark: rgb(18, 20, 26);
-  --inv-dark: 1;
+  --bg-light: rgb(216, 216, 208);
 }
 
 body,
@@ -17,7 +17,6 @@ body {
   font-weight: 300;
   line-height: 1.7;
   color: #c4c3ca;
-  background-color: var(--bg-dark);
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
   -khtml-user-select: none; /* Konqueror HTML */
@@ -32,4 +31,38 @@ main {
   left: max(4vw, 9vh);
   right: max(4vw, 9vh);
   height: 85vh;
+}
+
+.background-dark {
+  position: fixed;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -10;
+  background-color: var(--bg-dark);
+}
+
+.background-light {
+  position: fixed;
+  right: 0;
+  height: 100%;
+  width: 0%;
+  z-index: -9;
+  background-color: var(--bg-light);
+}
+
+.bg-cat-paw {
+    display: None;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: max(50vh, 250px);
+}
+
+.bg-cat-paw img {
+    position: relative;
+    bottom: -33%;
+    height: 100%;
+    width: auto;
+    transform: rotate(-20deg);
 }

@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/dist/query";
-import menuReducer from "./menu/menuUI";
+import lightSwitchReducer from "./lightSwitchSlice";
 
 export const store = configureStore({
   reducer: {
-    menuSlice: menuReducer,
+    lightSwitchSlice: lightSwitchReducer,
   },
 });
 
