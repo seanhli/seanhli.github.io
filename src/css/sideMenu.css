@@ -1,9 +1,11 @@
 :root {
   --bg-dark: rgb(18, 20, 26);
+  --bg-light: rgb(216, 216, 208);
 }
 
 .side-menu {
   position: absolute;
+  z-index: 4;
   margin: max(30px, 3vh) 0 0 max(30px, 1.5vw);
   width: fit-content;
   height: auto;
@@ -15,7 +17,7 @@
   display: none;
   width: max(50px, 2vw);
   height: max(6.5vh, 30px);
-  opacity: 0.75;
+  opacity: 0.25;
   margin-top: max(0.5vh, 5px);
   margin-bottom: max(0.5vh, 5px);
 }
@@ -27,6 +29,7 @@
 
 .menu-toggle {
   width: max(50px, 2vw);
+  cursor: pointer;
 }
 
 #opened-book {
@@ -36,6 +39,7 @@
 .menu-icon {
   display: none;
   width: max(50px, 2vw);
+  cursor: pointer;
 }
 
 .menu-tag {

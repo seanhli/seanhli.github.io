@@ -35,6 +35,7 @@ function SideMenu() {
           alt="closed menu"
           onClick={isPlaying ? null : () => toggleMenu(false)}
           className="menu-toggle"
+          title="menu"
           id="closed-book"
         />
       </div>
@@ -42,6 +43,7 @@ function SideMenu() {
         <img
           src={require("./assets/open-book-color.png")}
           alt="opened menu"
+          title="menu"
           onClick={isPlaying ? null : () => toggleMenu(true)}
           className="menu-toggle"
           id="opened-book"

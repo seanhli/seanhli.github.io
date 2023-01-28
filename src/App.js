@@ -3,6 +3,8 @@ import Background from "./background";
 import Footer from "./footer";
 import LightSwitch from "./lightSwitch";
 import SideMenu from "./sideMenu";
+import MainDisplay from "./pages/mainDisplay"
+import Landing from "./pages/landing";
 
 function App() {
 
@@ -10,6 +12,9 @@ function App() {
     <HashRouter>
       <main>
         <Routes>
+          <Route path="/" element={<MainDisplay/>}>
+            <Route index element={<Landing/>}/>
+          </Route>
         </Routes>
       </main>
       <Background/>

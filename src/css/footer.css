@@ -1,5 +1,6 @@
 .footer {
   position: absolute;
+  z-index: 4;
   display: flex;
   right: max(40px, 2vw);
   bottom: max(30px, 3vh);

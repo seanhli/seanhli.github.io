@@ -34,7 +34,6 @@ img {
 
 main {
   position: absolute;
-  top: 7.5vh;
   left: max(4vw, 9vh);
   right: max(4vw, 9vh);
   height: 85vh;
@@ -60,6 +59,7 @@ main {
 
 .bg-cat-paw {
   display: None;
+  z-index: 3;
   position: fixed;
   bottom: 0;
   right: 0;
@@ -72,4 +72,13 @@ main {
   height: 100%;
   width: auto;
   transform: rotate(-20deg);
+}
+
+.main-display {
+  position: fixed;
+  z-index: 2;
+  left: 50%;
+  margin-left: -35vw;
+  height: 100%;
+  width: 70vw;
 }

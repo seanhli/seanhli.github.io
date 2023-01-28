@@ -8,13 +8,6 @@ function LightSwitch() {
   const dispatch = useDispatch();
   const [isPlaying, setIsPlaying] = useState(false);
 
-  // on container click, animation will play
-  // then moon/sun sign will flip a few times during the animation (transform rotateY 720deg+)
-  // before switching to other sign (probably ending around 1s in)
-  // once sign switches, dispatch will fire off and dark mode state in store will switch
-  // during animation, on click will be disabled (use a local state to say animation is playing)
-  // use ternary for img onclick: isPlaying ? null : lightSwitch()
-
   function flipLightSwitch(mode) {
     setIsPlaying(true);
     let bgTL = backgroundSwitch(!mode);
