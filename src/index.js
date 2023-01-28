@@ -7,7 +7,7 @@ import "./css/main.css";
 import "./css/sideMenu.css";
 import "./css/footer.css";
 import "./css/lightswitch.css";
-import "./css/pages.css";
+import "./css/landing.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

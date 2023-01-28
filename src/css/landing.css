@@ -7,13 +7,9 @@
   --line-light: rgb(127, 135, 148);
 }
 
-/*================
-LANDING PAGE CSS
-=================*/
-
 .hanging-display {
   position: relative;
-  animation: swing 5s ease-in-out;
+  animation: swing 5s ease-in-out, lrsway 5s 4.85s linear infinite;
 }
 
 .hanging-strings {
@@ -65,7 +61,7 @@ body.light .hanging-strings {
   font-size: max(max(6.5vh, 4vw), 30px);
   font-weight: 600;
   width: 0;
-  animation: typing 0.5s steps(30, end) 1s forwards;
+  animation: typing 0.75s steps(16, end) 0.5s forwards;
 }
 
 .sub-label {
@@ -76,7 +72,7 @@ body.light .hanging-strings {
   font-size: max(3vh, 18px);
   font-weight: 500;
   border-right: 2px solid rgba(255, 255, 255, 0);
-  animation: typing 0.35s steps(30, end) 1.55s forwards,
+  animation: typing 0.35s steps(10, end) 1.55s forwards,
     blinking 0.75s 1.9s infinite;
 }
 
@@ -127,6 +123,17 @@ body.light .hanging-strings {
   }
   90% {
     transform: rotateX(5deg) rotateZ(1deg) rotateY(-4deg);
+    transform-origin: 10% left;
+  }
+}
+
+@keyframes lrsway {
+  25% {
+    transform: rotateX(-2.5deg) rotateZ(-1deg) rotateY(2deg);
+    transform-origin: 10% left;
+  }
+  75% {
+    transform: rotateX(2.5deg) rotateZ(1deg) rotateY(-2deg);
     transform-origin: 10% left;
   }
 }
