@@ -13,7 +13,7 @@ function LightSwitch() {
     let bgTL = backgroundSwitch(!mode);
     bgTL.play();
     setTimeout(() => {
-      dispatch(toggleLight(mode));
+      dispatch(toggleLight([mode, bgTL.duration() * 1000 - 550]));
     }, 550);
     setTimeout(() => {
       setIsPlaying(false);

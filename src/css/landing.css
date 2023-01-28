@@ -24,7 +24,7 @@
   opacity: 0.3;
 }
 
-body.light .hanging-strings {
+.main-display.light .hanging-strings {
   border-left: 1px solid black;
   border-right: 1px solid black;
 }
@@ -42,6 +42,12 @@ body.light .hanging-strings {
   border: 5px solid white;
   color: white;
   border-radius: 2vh;
+}
+
+.main-display.light .hanging-sign {
+  background-color: white;
+  border: 5px solid black;
+  color: black;
 }
 
 .center-container {
@@ -76,6 +82,11 @@ body.light .hanging-strings {
     blinking 0.75s 1.9s infinite;
 }
 
+.main-display.light .sub-label {
+  animation: typing 0.35s steps(10, end) 1.55s forwards,
+    blinking-dark 0.75s 1.9s infinite;
+}
+
 .sub-label:hover {
   filter: drop-shadow(0px 0px max(8px, 1.5vh) rgb(255, 255, 255));
 }
@@ -95,6 +106,18 @@ body.light .hanging-strings {
   }
   50% {
     border-color: white;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
+@keyframes blinking-dark {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
   }
   100% {
     border-color: transparent;

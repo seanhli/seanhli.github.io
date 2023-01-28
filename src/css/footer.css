@@ -21,11 +21,11 @@
   animation: scaledown-dark 3s infinite ease;
 }
 
-body.light .footer-icon {
+.footer.light .footer-icon {
   filter: invert(0) grayscale(1);
 }
 
-body.light .footer-icon:hover {
+.footer.light .footer-icon:hover {
   animation: scaledown-light 3s infinite ease;
 }
 

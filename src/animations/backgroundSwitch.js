@@ -33,23 +33,23 @@ export function backgroundSwitch(endInLM) {
       ".bg-cat-paw",
       {
         delay: 0.5,
-        duration: 1.5,
+        duration: 1.25,
         right: "100%",
         ease: "resistance",
       },
       "phase-1"
     );
 
-  bgTL
-    .to(
-      `${endInLM ? ".dm-moon": ".lm-sun"}`,
-      {
-        duration: 0.55,
-        rotateY: "+=900deg",
-        ease: "power1.in"
-      },
-      "phase-1"
-    )
+  //spin sign
+  bgTL.to(
+    `${endInLM ? ".dm-moon" : ".lm-sun"}`,
+    {
+      duration: 0.55,
+      rotateY: "+=900deg",
+      ease: "power1.in",
+    },
+    "phase-1"
+  );
 
   //background slide
   bgTL
@@ -57,7 +57,7 @@ export function backgroundSwitch(endInLM) {
       `.background-${endInLM ? "light" : "dark"}`,
       {
         delay: 0.5,
-        duration: 1.5,
+        duration: 1.25,
         width: "100%",
         ease: "resistance",
       },

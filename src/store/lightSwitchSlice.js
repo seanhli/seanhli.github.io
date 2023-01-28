@@ -10,17 +10,55 @@ export const lightSwitchSlice = createSlice({
   initialState, // Set the initial state declared above
   reducers: {
     toggleLight: (state, action) => {
-      state["darkMode"] = action.payload;
-      const body = document.querySelector("body");
-      if (!state["darkMode"] && !body.classList.contains("light")) {
-        body.classList.add("light");
-      } else if (state["darkMode"] && body.classList.contains("light")) {
-        body.classList.remove("light");
+      state["darkMode"] = action.payload[0];
+      //split page into sections (right, center, left)
+
+      const footer = document.querySelector(".footer");
+      const main = document.querySelector(".main-display");
+      const menu = document.querySelector(".side-menu");
+      if (!state["darkMode"]) {
+        // right side (footer)
+        setTimeout(() => {
+          if (!footer.classList.contains("light")) {
+            footer.classList.add("light");
+          }
+        }, action.payload[1]*0.05);
+        // center (main display)
+        setTimeout(() => {
+          if (!main.classList.contains("light")) {
+            main.classList.add("light");
+          }
+        }, action.payload[1]*0.6);
+        // left side (side menu)
+        setTimeout(() => {
+          if (!menu.classList.contains("light")) {
+            menu.classList.add("light");
+          }
+        }, action.payload[1]*0.8);
+      } else {
+        // right side (footer)
+        setTimeout(() => {
+          if (footer.classList.contains("light")) {
+            footer.classList.remove("light");
+          }
+        }, action.payload[1]*0.05);
+        // center (main display)
+        setTimeout(() => {
+          if (main.classList.contains("light")) {
+            main.classList.remove("light");
+          }
+        }, action.payload[1]*0.6);
+        // left side (side menu)
+        setTimeout(() => {
+          if (menu.classList.contains("light")) {
+            menu.classList.remove("light");
+          }
+        }, action.payload[1]*0.8);
       }
     },
     toggleDelay: (state) => {
-      state["delayedDarkMode"] = state["darkMode"]
-    }
+      state["delayedDarkMode"] = state["darkMode"];
+    },
   },
 });
 
