@@ -14,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainDisplay/>}>
             <Route index element={<Landing/>}/>
+            <Route path="about-me" element={<></>}/>
           </Route>
         </Routes>
       </main>

@@ -42,12 +42,14 @@
   border: 5px solid white;
   color: white;
   border-radius: 2vh;
+  filter: drop-shadow(max(8px,1.25vh) max(8px,1.25vh) 0px rgba(255, 255, 255, 0.6));
 }
 
 .main-display.light .hanging-sign {
   background-color: white;
   border: 5px solid black;
   color: black;
+  filter: drop-shadow(max(8px,1.25vh) max(8px,1.25vh) 0px rgba(0, 0, 0, 0.6));
 }
 
 .center-container {
@@ -89,6 +91,19 @@
 
 .sub-label:hover {
   filter: drop-shadow(0px 0px max(8px, 1.5vh) rgb(255, 255, 255));
+}
+
+.main-display.light .sub-label:hover {
+  filter: drop-shadow(0px 0px max(8px, 1.5vh) rgba(0, 0, 0, 0.6));
+}
+
+.sign-cat-paw {
+  display: none;
+  position: fixed;
+  bottom: -30vh;
+  left: 50%;
+  margin-left: -15vh;
+  height: max(50vh, 250px);
 }
 
 @keyframes typing {
