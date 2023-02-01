@@ -5,6 +5,7 @@ import LightSwitch from "./lightSwitch";
 import SideMenu from "./sideMenu";
 import MainDisplay from "./pages/mainDisplay"
 import Landing from "./pages/landing";
+import AboutMe from "./pages/aboutMe";
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainDisplay/>}>
             <Route index element={<Landing/>}/>
-            <Route path="about-me" element={<></>}/>
+            <Route path="about-me" element={<AboutMe/>}/>
           </Route>
         </Routes>
       </main>

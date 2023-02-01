@@ -8,6 +8,7 @@ import "./css/sideMenu.css";
 import "./css/footer.css";
 import "./css/lightswitch.css";
 import "./css/landing.css";
+import "./css/aboutMe.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

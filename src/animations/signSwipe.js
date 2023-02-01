@@ -62,7 +62,7 @@ export function signSwipe() {
         rotateY: "+=10deg",
         rotateZ: "-=15deg",
         translateY: "-35vh",
-        ease: "power2.out",
+        ease: "power4.out",
       },
       "phase-2"
     )

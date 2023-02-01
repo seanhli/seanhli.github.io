@@ -1,0 +1,187 @@
+:root {
+  --dark: rgb(56, 56, 56);
+  --light: rgb(235, 227, 209);
+  --shadow: rgba(0, 0, 0, 0.4);
+  --tape-dm: rgb(219, 216, 190);
+  --tape-lm: rgb(39, 39, 38);
+}
+
+.am-cat-paw {
+  position: fixed;
+  z-index: 5;
+  top: -10vh;
+  left: 50%;
+  margin-left: -25vh;
+  height: max(50vh, 250px);
+  transform: rotate(160deg);
+  filter: drop-shadow(-4px -4px 1px rgba(0, 0, 0, 0.6));
+  animation: howcancatslap 0.35s ease-out both, slideaway 0.5s 0.35s both;
+}
+
+.am-paper {
+  z-index: 2;
+  display: flex;
+  position: relative;
+  width: max(40vw, 250px);
+  height: 55vh;
+  top: 20vh;
+  left: 50%;
+  margin-left: min(-20vw, -125px);
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px 1px 1px var(--shadow);
+  background-color: var(--dark);
+  background-image: url("../assets/lined-paper-2.png");
+  color: white;
+  animation: howcansheslap 0.35s ease-out;
+}
+
+.main-display.light .am-paper {
+  background-color: var(--light);
+  color: black;
+}
+
+.am-paper .paper-text {
+  overflow-y: auto;
+  overflow-wrap: break-word;
+  height: 87%;
+  width: 90%;
+}
+
+.am-title {
+  font-size: max(3.5vh, 22px);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: max(1vh, 5px);
+}
+
+.am-content {
+  font-size: max(2.35vh, 16px);
+  padding-left: max(12.5px, 1vw);
+  padding-right: max(12.5px, 1vw);
+}
+
+.tape-section {
+  position: absolute;
+  width: 100%;
+}
+
+.tape-section:first-of-type {
+  top: 0;
+}
+
+.tape-section:last-of-type {
+  bottom: 0;
+}
+
+.tape-section::before,
+.tape-section::after {
+  content: "";
+  width: 10vmin;
+  height: 4vmin;
+  position: absolute;
+  opacity: 0.5;
+  background-color: var(--tape-dm);
+}
+
+.main-display.light .tape-section::before,
+.main-display.light .tape-section::after {
+  background-color: var(--tape-lm);
+}
+
+.tape-section:last-of-type::after {
+  transform: rotate(-45deg);
+  right: -4vmin;
+  top: -3vmin;
+}
+
+.tape-section:first-of-type::before {
+  transform: rotate(-45deg);
+  left: -4vmin;
+}
+
+.tape-section:first-of-type::after {
+  transform: rotate(45deg);
+  right: -4vmin;
+  top: 0;
+}
+
+.tape-section:last-of-type::before {
+  transform: rotate(45deg);
+  left: -4vmin;
+  bottom: 0;
+}
+
+.photo-stick {
+  position: fixed;
+  z-index: 3;
+  left: max(30px, 15vw);
+  bottom: min(-50px, -6vh);
+  transform: rotate(-15deg);
+  animation: rotatopotato 0.6s 0.5s ease-out both;
+}
+
+.picture-frame {
+  z-index: 3;
+  position: relative;
+  top: 0;
+  width: max(150px, 15vw, 30vh);
+  height: max(75px, 7.5vw, 15vh);
+  max-width: 40vw;
+  max-height: 20vw;
+  border-radius: 1vh;
+  padding: max(5px, 1.5vh);
+  background-color: rgb(133, 99, 36);
+  background-image: url("../assets/dark-wood-horizontal.png");
+  background-size: 100%;
+  filter: drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.6));
+}
+
+.picture-frame img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1vh;
+  filter: drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.6));
+}
+
+.photo-stick .stick {
+  z-index: 2;
+  position: relative;
+  margin-top: min(-100px, max(-20vh, -30vw));
+  left: 50%;
+  margin-left: min(-10px, -1.5vw);
+  height: max(220px, 40vh);
+  max-height: 60vw;
+  width: max(20px, 3vw);
+  background-color: rgb(133, 99, 36);
+  background-image: url("../assets/dark-wood.png");
+}
+
+@keyframes rotatopotato {
+  0% {
+    transform: translateY(40vh) translateX(15vh) rotate(-15deg);
+  }
+}
+
+@keyframes howcansheslap {
+  0% {
+    transform: scale(200%) translateY(-60vh) translateX(-20vh);
+  }
+}
+
+@keyframes howcancatslap {
+  0% {
+    opacity: 1;
+    transform: rotate(160deg) scale(200%) translateY(50vh) translateX(10vh);
+  }
+}
+
+@keyframes slideaway {
+  99% {
+    opacity: 1;
+    transform: rotate(160deg) translateY(65vh) translateX(15vh);
+  }
+  100% {
+    opacity: 0;
+  }
+}

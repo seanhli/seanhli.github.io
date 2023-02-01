@@ -82,3 +82,30 @@ main {
   height: 100%;
   width: 70vw;
 }
+
+/* ================================
+  SCROLL BAR CHANGES
+================================ */
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.5vw;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 5vh;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 255, 255);
+}
+
+.main-display.light ::-webkit-scrollbar-thumb {
+  background: rgba(32, 32, 32, 0.6);
+}
+
+.main-display.light ::-webkit-scrollbar-thumb:hover {
+  background: rgb(17, 17, 17);
+}
