@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toggleExiting } from "../store/exitAnimationSlice";
+import { aboutMeExitAnimation } from "../animations/aboutMeExit";
 
 function AboutMe() {
   const darkModeOn = useSelector(
@@ -20,10 +21,12 @@ function AboutMe() {
   }, [exiting]); // eslint-disable-line
 
   function exit(path) {
+    const amExit = aboutMeExitAnimation();
+    amExit.play()
     setTimeout(() => {
       dispatch(toggleExiting());
       navigate(path);
-    }, 0 * 1000);
+    }, amExit.duration() * 1000);
   }
 
   return (
@@ -33,6 +36,22 @@ function AboutMe() {
         src={require(`../assets/${darkModeOn ? "grey" : "dark"}-paw-back.png`)}
         alt="paw"
       />
+      <div className="exit-paw">
+        <img
+          className="paint-roller"
+          src={require(`../assets/paint-roller-${
+            darkModeOn ? "dark" : "light"
+          }-lg.jpg`)}
+          alt="paint-roller"
+        />
+        <img
+          className="am-cat-paw-exit"
+          src={require(`../assets/${
+            darkModeOn ? "grey" : "dark"
+          }-paw-back.png`)}
+          alt="paw"
+        />
+      </div>
       <div className="am-paper">
         <div className="tape-section"></div>
         <div className="paper-text">

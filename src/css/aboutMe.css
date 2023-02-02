@@ -18,6 +18,31 @@
   animation: howcancatslap 0.35s ease-out both, slideaway 0.5s 0.35s both;
 }
 
+.exit-paw {
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 5;
+  top: 50%;
+  margin-top: min(-62.5vh, -250px);
+  width: max(70vh, 300px);
+  left: 125%;
+  transform: rotate(-90deg);
+}
+
+.paint-roller {
+  position: relative;
+  width: 100%;
+}
+
+.am-cat-paw-exit {
+  margin-top: -50%;
+  z-index: 5;
+  width: 75%;
+  filter: drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.6));
+}
+
 .am-paper {
   z-index: 2;
   display: flex;
@@ -124,7 +149,7 @@
 
 .photo-stick:hover {
   filter: drop-shadow(0px 0px max(1.5vh, 8px) rgb(255, 255, 255));
-  animation: hide 5s infinite ease;
+  animation: rotatopotato 0s, hide 5s infinite ease;
 }
 
 .picture-frame {
