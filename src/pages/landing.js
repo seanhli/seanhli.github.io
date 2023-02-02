@@ -1,22 +1,30 @@
-import { useState } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { signSwipe } from "../animations/signSwipe";
+import { toggleExiting, changeNextPage } from "../store/exitAnimationSlice";
 
 function Landing() {
   const navigate = useNavigate();
-  const [isPlaying, setIsPlaying] = useState(false);
   const darkModeOn = useSelector(
     (state) => state.lightSwitchSlice.delayedDarkMode
   );
+  const exiting = useSelector((state) => state.exitAnimationSlice.exiting);
+  const nextPage = useSelector((state) => state.exitAnimationSlice.nextPage);
+  const dispatch = useDispatch();
 
-  function exit() {
-    setIsPlaying(true);
+  useEffect(() => {
+    if (exiting) {
+      exit(nextPage);
+    }
+  }, [exiting]); // eslint-disable-line
+
+  function exit(path) {
     let swipeAnimation = signSwipe();
     swipeAnimation.play();
     setTimeout(() => {
-      setIsPlaying(false);
-      navigate("/about-me/");
+      dispatch(toggleExiting());
+      navigate(path);
     }, swipeAnimation.duration() * 1000);
   }
 
@@ -33,7 +41,14 @@ function Landing() {
               <div className="text-container">
                 <div
                   className="sub-label"
-                  onClick={isPlaying ? null : () => exit()}
+                  onClick={
+                    exiting
+                      ? null
+                      : () => {
+                          dispatch(changeNextPage("/about-me/"));
+                          dispatch(toggleExiting(true));
+                        }
+                  }
                 >
                   ENTER?&nbsp;
                 </div>

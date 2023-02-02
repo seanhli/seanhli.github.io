@@ -16,6 +16,7 @@
 .menu-bar-line {
   display: none;
   width: max(50px, 2vw);
+  /* adjusted in menuAnimation */
   height: max(6.5vh, 30px);
   opacity: 0.25;
   margin-top: max(0.5vh, 5px);
@@ -50,7 +51,7 @@
   padding: max(0.25vh, 2px) max(1vw, 20px) max(0.25vh, 2px) max(1vw, 20px);
   border-radius: 10vh;
   border: 2px solid white;
-  background-color: rgba(18, 20, 26, 0.4);
+  background-color: rgba(18, 20, 26, 1);
 }
 
 .menu-toggle:hover + .menu-tag {

@@ -115,10 +115,16 @@
 .photo-stick {
   position: fixed;
   z-index: 3;
-  left: max(30px, 15vw);
+  left: max(30px, 12.5vw);
   bottom: min(-50px, -6vh);
   transform: rotate(-15deg);
   animation: rotatopotato 0.6s 0.5s ease-out both;
+  cursor: pointer;
+}
+
+.photo-stick:hover {
+  filter: drop-shadow(0px 0px max(1.5vh, 8px) rgb(255, 255, 255));
+  animation: hide 5s infinite ease;
 }
 
 .picture-frame {
@@ -130,7 +136,7 @@
   max-width: 40vw;
   max-height: 20vw;
   border-radius: 1vh;
-  padding: max(5px, 1.5vh);
+  padding: max(5px, 1.5vh) max(10px, 2vh);
   background-color: rgb(133, 99, 36);
   background-image: url("../assets/dark-wood-horizontal.png");
   background-size: 100%;
@@ -160,6 +166,12 @@
 @keyframes rotatopotato {
   0% {
     transform: translateY(40vh) translateX(15vh) rotate(-15deg);
+  }
+}
+
+@keyframes hide {
+  50% {
+    transform: translateY(10vh) translateX(2vh) rotate(-15deg);
   }
 }
 

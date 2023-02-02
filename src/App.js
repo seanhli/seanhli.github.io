@@ -6,6 +6,9 @@ import SideMenu from "./sideMenu";
 import MainDisplay from "./pages/mainDisplay"
 import Landing from "./pages/landing";
 import AboutMe from "./pages/aboutMe";
+import Experiences from "./pages/experiences";
+import Projects from "./pages/projects";
+import ContactMe from "./pages/contactMe";
 
 function App() {
 
@@ -16,6 +19,9 @@ function App() {
           <Route path="/" element={<MainDisplay/>}>
             <Route index element={<Landing/>}/>
             <Route path="about-me" element={<AboutMe/>}/>
+            <Route path="experiences" element={<Experiences/>}/>
+            <Route path="projects" element={<Projects/>}/>
+            <Route path="contact-me" element={<ContactMe/>}/>
           </Route>
         </Routes>
       </main>

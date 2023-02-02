@@ -9,6 +9,9 @@ import "./css/footer.css";
 import "./css/lightswitch.css";
 import "./css/landing.css";
 import "./css/aboutMe.css";
+import "./css/experiences.css";
+import "./css/projects.css";
+import "./css/contactMe.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

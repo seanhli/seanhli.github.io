@@ -1,9 +1,30 @@
-import { useSelector } from "react-redux";
+import { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { toggleExiting } from "../store/exitAnimationSlice";
 
 function AboutMe() {
   const darkModeOn = useSelector(
     (state) => state.lightSwitchSlice.delayedDarkMode
   );
+  const [photo, setPhoto] = useState(true);
+  const exiting = useSelector((state) => state.exitAnimationSlice.exiting);
+  const nextPage = useSelector((state) => state.exitAnimationSlice.nextPage);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (exiting) {
+      exit(nextPage);
+    }
+  }, [exiting]); // eslint-disable-line
+
+  function exit(path) {
+    setTimeout(() => {
+      dispatch(toggleExiting());
+      navigate(path);
+    }, 0 * 1000);
+  }
 
   return (
     <>
@@ -17,24 +38,33 @@ function AboutMe() {
         <div className="paper-text">
           <div className="am-title">a bit about me</div>
           <div className="am-content">
-            Sean graduated from Dartmouth College in 2017 and ever since, he has
-            been in the tech industry. Whether as a consultant, product manager,
+            Sean graduated from Dartmouth College in 2017 and has been in the
+            tech industry ever since. Whether as a consultant, product manager,
             or now software engineer, Sean is a problem solver first. His
             passion lies in building products that address real world needs and
-            have meaningful and measurable impact. While recently formally
-            transitioned to the role of software engineer, Sean already has
-            years of professional experience with coding and has completed the
-            Hack Reactor Advanced Software Immersive Program with flying colors
+            have meaningful, measurable impact. While recently transitioned to
+            the role of software engineer, Sean already has years of
+            professional experience coding, collaborating with software
+            engineers, and completing the Hack Reactor Advanced Software
+            Immersive Program with flying colors
           </div>
         </div>
         <div className="tape-section"></div>
       </div>
-      <div className="photo-stick">
-        <div className="picture-frame">
-          <img src={require("../assets/Sliphoto.png")} alt="sli" />
+      {photo && (
+        <div
+          className="photo-stick"
+          onClick={() => {
+            setPhoto(false);
+          }}
+          title="click to hide"
+        >
+          <div className="picture-frame">
+            <img src={require("../assets/Sliphoto.png")} alt="sli" />
+          </div>
+          <div className="stick"></div>
         </div>
-        <div className="stick"></div>
-      </div>
+      )}
     </>
   );
 }

@@ -74,13 +74,13 @@ export function menuAnimation() {
       "phase-0"
     );
 
-  for (let i = 1; i <= 3; i++) {
+  for (let i = 1; i <= 4; i++) {
     openMenuTL
       .to(
         `#bar-${i}`,
         {
           duration: 0.15,
-          height: "max(6.5vh, 30px)",
+          height: "max(4.5vh, 10px)",
         },
         `phase-${i}`
       )
@@ -95,7 +95,7 @@ export function menuAnimation() {
       );
   }
 
-  for (let i = 3; i >= 1; i--) {
+  for (let i = 4; i >= 1; i--) {
     closeMenuTL
       .to(
         `#menu-icon-${i}`,

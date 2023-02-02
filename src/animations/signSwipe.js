@@ -24,7 +24,7 @@ export function signSwipe() {
     .to(
       ".sign-cat-paw",
       {
-        duration: 0.5,
+        duration: 0.75,
         scaleX: "100%",
         scaleY: "100%",
         translateY: "-25vh",
@@ -35,7 +35,7 @@ export function signSwipe() {
     .to(
       ".sign-cat-paw",
       {
-        duration: 0.5,
+        duration: 0.75,
         scaleX: "50%",
         scaleY: "50%",
         translateY: "60vh",
@@ -57,7 +57,7 @@ export function signSwipe() {
   .to(
       ".hanging-display",
       {
-        duration: 0.25,
+        duration: 0.5,
         rotateX: "+=90deg",
         rotateY: "+=10deg",
         rotateZ: "-=15deg",

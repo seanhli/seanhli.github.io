@@ -1,29 +1,32 @@
-import { useState } from "react"
+import { useState } from "react";
 import { menuAnimation } from "./animations/menuAnimation";
+import { useDispatch } from "react-redux";
+import { toggleExiting, changeNextPage } from "./store/exitAnimationSlice";
 
 function SideMenu() {
-    const [isPlaying, setIsPlaying] = useState(false)
+  const [isPlaying, setIsPlaying] = useState(false);
+  const dispatch = useDispatch();
 
   function toggleMenu(state) {
     let [openBook, closeBook, openMenuTL, closeMenuTL] = menuAnimation();
-    setIsPlaying(true)
+    setIsPlaying(true);
 
     if (state) {
       closeBook.play();
-      setTimeout(()=>{
-        closeMenuTL.play()
-        setTimeout(()=>{
-            setIsPlaying(false)
-        }, closeMenuTL.duration()*1000)
-      }, closeBook.duration()*1000)
+      setTimeout(() => {
+        closeMenuTL.play();
+        setTimeout(() => {
+          setIsPlaying(false);
+        }, closeMenuTL.duration() * 1000);
+      }, closeBook.duration() * 1000);
     } else {
       openBook.play();
-      setTimeout(()=>{
-        openMenuTL.play()
-        setTimeout(()=>{
-            setIsPlaying(false)
-        }, openMenuTL.duration()*1000)
-      }, openBook.duration()*1000)
+      setTimeout(() => {
+        openMenuTL.play();
+        setTimeout(() => {
+          setIsPlaying(false);
+        }, openMenuTL.duration() * 1000);
+      }, openBook.duration() * 1000);
     }
   }
 
@@ -55,7 +58,13 @@ function SideMenu() {
         className="menu-bar-line"
         id="bar-1"
       />
-      <div className="menu-item">
+      <div
+        className="menu-item"
+        onClick={() => {
+          dispatch(toggleExiting(true));
+          dispatch(changeNextPage("/about-me/"));
+        }}
+      >
         <img
           src={require("./assets/about-me-color.png")}
           alt="about me"
@@ -70,7 +79,13 @@ function SideMenu() {
         className="menu-bar-line"
         id="bar-2"
       />
-      <div className="menu-item">
+      <div
+        className="menu-item"
+        onClick={() => {
+          dispatch(toggleExiting(true));
+          dispatch(changeNextPage("/experiences/"));
+        }}
+      >
         <img
           src={require("./assets/experiences-color.png")}
           alt="experiences"
@@ -85,7 +100,13 @@ function SideMenu() {
         className="menu-bar-line"
         id="bar-3"
       />
-      <div className="menu-item">
+      <div
+        className="menu-item"
+        onClick={() => {
+          dispatch(toggleExiting(true));
+          dispatch(changeNextPage("/projects/"));
+        }}
+      >
         <img
           src={require("./assets/projects-color.png")}
           alt="projects"
@@ -93,6 +114,27 @@ function SideMenu() {
           id="menu-icon-3"
         />
         <div className="menu-tag">my projects</div>
+      </div>
+      <img
+        src={require("./assets/bar-color.png")}
+        alt="bar"
+        className="menu-bar-line"
+        id="bar-4"
+      />
+      <div
+        className="menu-item"
+        onClick={() => {
+          dispatch(toggleExiting(true));
+          dispatch(changeNextPage("/contact-me/"));
+        }}
+      >
+        <img
+          src={require("./assets/contact-color.png")}
+          alt="contact-me"
+          className="menu-icon"
+          id="menu-icon-4"
+        />
+        <div className="menu-tag">contact me</div>
       </div>
     </div>
   );
