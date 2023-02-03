@@ -15,7 +15,9 @@ function AboutMe() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (exiting) {
+    if (nextPage === "/about-me/") {
+      dispatch(toggleExiting());
+    } else if (exiting) {
       exit(nextPage);
     }
   }, [exiting]); // eslint-disable-line

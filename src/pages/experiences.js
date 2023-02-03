@@ -12,7 +12,9 @@ function Experiences() {
   const [focus, setFocus] = useState(false);
 
   useEffect(() => {
-    if (exiting) {
+    if (nextPage === "/experiences/") {
+      dispatch(toggleExiting());
+    } else if (exiting) {
       exit(nextPage);
     }
   }, [exiting]); // eslint-disable-line

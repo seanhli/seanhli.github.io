@@ -10,7 +10,9 @@ function Projects() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (exiting) {
+    if (nextPage === "/projects/") {
+      dispatch(toggleExiting());
+    } else if (exiting) {
       exit(nextPage);
     }
   }, [exiting]); // eslint-disable-line

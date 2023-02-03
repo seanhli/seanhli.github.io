@@ -1,0 +1,91 @@
+.contact-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  top: 5%;
+  left: 50%;
+  margin-left: -40%;
+  width: 80%;
+  color: white;
+}
+
+.main-display.light .contact-page {
+  color: black;
+}
+
+.contact-container {
+  width: fit-content;
+  padding: 1.5vmax 2.5vmax;
+  background-color: rgb(73, 73, 73);
+  border: 3px solid rgb(231, 231, 231);
+  border-radius: 1px;
+  box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.5);
+  transform: rotate(1deg);
+  animation: subtlecolouring 0.4s ease-out;
+}
+
+.main-display.light .contact-container {
+  background-color: rgb(238, 238, 238);
+  border: 3px solid rgb(54, 54, 54);
+}
+
+.contact-title {
+  font-size: max(3vh, 24px);
+  margin-bottom: max(0.5vh, 3px);
+}
+
+.contact-content {
+  font-size: max(2.25vh, 16px);
+}
+
+.email-clipboard {
+  height: max(2.2vh, 16px);
+  width: auto;
+  margin-left: 4px;
+  cursor: pointer;
+  filter: invert(1);
+}
+
+.main-display.light .email-clipboard {
+  filter: invert(0);
+}
+
+.contact-content a {
+  text-decoration: inherit;
+  color: rgb(190, 190, 190);
+}
+
+.main-display.light .contact-content a {
+  color: rgb(47, 55, 128);
+}
+
+@keyframes subtlecolouring {
+  0% {
+    transform: translateY(70vh) translateX(10vw) rotate(-15deg);
+  }
+}
+
+.cm-cat-paw {
+  position: fixed;
+  display: none;
+  z-index: 5;
+  top: -10vh;
+  margin-left: min(-20vw, -200px);
+  height: max(60vh, 250px);
+  transform: rotate(160deg);
+  filter: drop-shadow(-4px -4px 1px rgba(0, 0, 0, 0.6));
+}
+
+.cm-cat-paw-2 {
+  position: fixed;
+  display: none;
+  z-index: 5;
+  bottom: -10vh;
+  margin-right: min(-20vw, -200px);
+  height: max(60vh, 250px);
+  transform: rotate(-20deg);
+  filter: drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.6));
+}

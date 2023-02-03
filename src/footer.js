@@ -2,7 +2,11 @@ function Footer() {
   return (
     <div className="footer">
       <div className="footer-item">
-        <a href="https://github.com/seanhli">
+        <a
+          href="https://github.com/seanhli"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             src={require("./assets/github-icon.png")}
             alt="github"
@@ -11,7 +15,11 @@ function Footer() {
         </a>
       </div>
       <div className="footer-item">
-        <a href="https://gitlab.com/seanhli">
+        <a
+          href="https://gitlab.com/seanhli"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             src={require("./assets/gitlab-icon.png")}
             alt="gitlab"
@@ -20,7 +28,11 @@ function Footer() {
         </a>
       </div>
       <div className="footer-item">
-        <a href="www.linkedin.com/in/sean-h-li">
+        <a
+          href="www.linkedin.com/in/sean-h-li"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             src={require("./assets/linkedin-icon.png")}
             alt="linkedin"
