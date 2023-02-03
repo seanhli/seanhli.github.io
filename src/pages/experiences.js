@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toggleExiting } from "../store/exitAnimationSlice";
+import { expExitAnimation } from "../animations/experiencesExit";
 
 function Experiences() {
   const exiting = useSelector((state) => state.exitAnimationSlice.exiting);
@@ -17,10 +18,13 @@ function Experiences() {
   }, [exiting]); // eslint-disable-line
 
   function exit(path) {
+    const expExit = expExitAnimation(content ? content.length : 0)
+    setFocus(false)
+    expExit.play()
     setTimeout(() => {
       dispatch(toggleExiting());
       navigate(path);
-    }, 0 * 1000);
+    }, expExit.duration() * 1000);
   }
 
   const content = [
@@ -104,6 +108,7 @@ function Experiences() {
               onClick={() => {
                 setFocus(tcd[0]);
               }}
+              key={`exp-${tcd[0]}`}
             >
               <div className="exp-post-title">{tcd[0]}</div>
               <div className="exp-post-date">{tcd[2]}</div>
