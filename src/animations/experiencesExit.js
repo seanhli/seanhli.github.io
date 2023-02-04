@@ -20,7 +20,7 @@ export function expExitAnimation(posts) {
         duration: 0.5,
         delay: 0.15*(i-1),
         translateY: "-100vh",
-        ease: "power2.out",
+        ease: "power2.in",
       },
       "phase-1"
     );

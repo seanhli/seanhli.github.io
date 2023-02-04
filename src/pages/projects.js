@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toggleExiting } from "../store/exitAnimationSlice";
+import { projectsExitAnimation } from "../animations/projectsExit";
 
 function Projects() {
   const exiting = useSelector((state) => state.exitAnimationSlice.exiting);
@@ -18,10 +19,12 @@ function Projects() {
   }, [exiting]); // eslint-disable-line
 
   function exit(path) {
+    const projectsExit = projectsExitAnimation(projects ? projects.length : 0)
+    projectsExit.play()
     setTimeout(() => {
       dispatch(toggleExiting());
       navigate(path);
-    }, 0 * 1000);
+    }, projectsExit.duration() * 1000);
   }
 
   const projects = ["kanji life", "gamify it!", "soon-tm", "wordle with cats"];

@@ -42,13 +42,13 @@ export function contactExitAnimation() {
       "phase-1"
     );
 
-  for (let i = 0; i <= 5; i++) {
+  for (let i = 0; i <= 3; i++) {
     contactExit.to(
       ".contact-page",
       {
-        duration: 0.3,
-        delay: 0.3 * i,
-        translateY: `${(-1) ** i * (5 + 3 * (i === 5 ? i * 30 : i))}vh`,
+        duration: 0.4,
+        delay: 0.4 * i,
+        translateY: `${(-1) ** i * (5 + 3 * (i === 3 ? i * 30 : i))}vh`,
         ease: "power2.out",
       },
       "phase-2"
