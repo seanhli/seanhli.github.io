@@ -15,11 +15,26 @@ export function menuAnimation() {
       },
       "phase-0"
     )
+    .to(
+      ".nav-hint",
+      {
+        duration: 0.25,
+        opacity: 0,
+      },
+      "phase-0"
+    )
     .set(
       "#closed-book",
       {
         display: "none",
         rotateY: "-=225deg",
+      },
+      "phase-1"
+    )
+    .set(
+      ".nav-hint",
+      {
+        display: "none",
       },
       "phase-1"
     )

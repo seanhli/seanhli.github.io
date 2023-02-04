@@ -41,6 +41,14 @@ function SideMenu() {
           title="menu"
           id="closed-book"
         />
+        <div className="nav-hint">
+          <img
+            src={require("./assets/arrow.png")}
+            alt="pointer"
+            className="nav-arrow"
+          />
+          <span>navigate here!</span>
+        </div>
       </div>
       <div className="menu-item">
         <img

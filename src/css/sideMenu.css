@@ -28,6 +28,24 @@
   align-items: center;
 }
 
+.nav-hint {
+  display: flex;
+  align-items: center;
+  color: rgb(216, 216, 216);
+}
+
+.nav-hint span {
+  font-family: 'Reenie Beanie';
+  font-size: max(2vh, 24px);
+}
+
+.nav-arrow {
+  height: max(3.5vh, 40px);
+  filter: invert(1);
+  margin-left: 7.5px;
+  margin-right: 5px;
+}
+
 .menu-toggle {
   width: max(50px, 2vw);
   cursor: pointer;
