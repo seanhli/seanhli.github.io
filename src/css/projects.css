@@ -63,6 +63,15 @@
   filter: invert(0.3);
 }
 
+.project-card-header span {
+  filter: invert(0.3);
+  font-weight: 400;
+}
+
+.project-card-tech {
+  font-size: max(1.5vh, 14px);
+}
+
 .project-card-content {
   font-size: max(2vh, 16px);
   font-weight: 600;
