@@ -29,7 +29,7 @@ function Footer() {
       </div>
       <div className="footer-item">
         <a
-          href="www.linkedin.com/in/sean-h-li"
+          href="https://www.linkedin.com/in/sean-h-li"
           target="_blank"
           rel="noopener noreferrer"
         >
