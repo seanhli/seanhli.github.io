@@ -138,7 +138,7 @@
   text-align: center;
   left: 0;
   width: 100%;
-  bottom: 9vh;
+  bottom: 10vh;
   font-size: max(2.3vh, 16px);
   color: white;
   animation: appear 1s 1s backwards;

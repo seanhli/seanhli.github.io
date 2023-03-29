@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toggleExiting } from "../store/exitAnimationSlice";
 import { aboutMeExitAnimation } from "../animations/aboutMeExit";
+import Pager from "../pager";
 
 function AboutMe() {
   const darkModeOn = useSelector(
@@ -86,6 +87,7 @@ function AboutMe() {
           <div className="stick"></div>
         </div>
       )}
+      <Pager prev='/' next='/experiences/'/>
     </>
   );
 }

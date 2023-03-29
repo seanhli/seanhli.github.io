@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toggleExiting } from "../store/exitAnimationSlice";
 import { projectsExitAnimation } from "../animations/projectsExit";
+import Pager from "../pager";
 
 function Projects() {
   const exiting = useSelector((state) => state.exitAnimationSlice.exiting);
@@ -137,6 +138,7 @@ function Projects() {
           );
         })}
       </div>
+      <Pager prev='/experiences/' next='/contact-me/'/>
     </>
   );
 }

@@ -44,3 +44,18 @@
       drop-shadow(0px 0px max(10px, 2vh) rgb(0, 0, 0));
   }
 }
+
+.pager-container {
+  position: fixed;
+  width: max(6vw,50px);
+  bottom: 3vh;
+  left: 50%;
+  margin-left: min(-3vw, -25px);
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+
+.main-display.light .pager-container {
+  color: black;
+}

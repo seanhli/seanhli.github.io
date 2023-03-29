@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toggleExiting } from "../store/exitAnimationSlice";
 import { contactExitAnimation } from "../animations/contactExit";
+import Pager from "../pager";
 
 function ContactMe() {
   const exiting = useSelector((state) => state.exitAnimationSlice.exiting);
@@ -65,6 +66,7 @@ function ContactMe() {
           alt="paw"
         />
       </div>
+      <Pager prev='/projects/' next='/'/>
     </>
   );
 }
