@@ -47,10 +47,10 @@
 
 .pager-container {
   position: fixed;
-  width: max(6vw,50px);
+  width: max(6vw,100px);
   bottom: 3vh;
   left: 50%;
-  margin-left: min(-3vw, -25px);
+  margin-left: min(-3vw, -50px);
   text-align: center;
   color: white;
   cursor: pointer;
