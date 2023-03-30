@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { signSwipe } from "../animations/signSwipe";
 import { toggleExiting, changeNextPage } from "../store/exitAnimationSlice";
+import Pager from "../pager";
 
 function Landing() {
   const navigate = useNavigate();
@@ -62,6 +63,7 @@ function Landing() {
         src={require(`../assets/${darkModeOn ? "grey" : "dark"}-paw-back.png`)}
         alt="paw"
       />
+      <Pager prev='/contact-me/' next='/about-me/'/>
     </>
   );
 }
