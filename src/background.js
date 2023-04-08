@@ -8,12 +8,8 @@ function Background() {
       <div className="background-dark"></div>
       <div className="background-light"></div>
       <div className="bg-cat-paw">
-        <img
-          src={require(`./assets/${
-            dmOn ? "grey" : "dark"
-          }-paw-back.png`)}
-          alt="paw"
-        />
+        {dmOn && <img src={require("./assets/grey-paw-back.png")} alt="paw"/>}
+        {!dmOn && <img src={require("./assets/dark-paw-back.png")} alt="paw"/>}
       </div>
     </>
   );
