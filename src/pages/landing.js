@@ -46,7 +46,7 @@ function Landing() {
                     exiting
                       ? null
                       : () => {
-                          dispatch(changeNextPage("/about-me/"));
+                          dispatch(changeNextPage("/cat/about-me/"));
                           dispatch(toggleExiting(true));
                         }
                   }
@@ -63,7 +63,7 @@ function Landing() {
         src={require(`../assets/${darkModeOn ? "grey" : "dark"}-paw-back.png`)}
         alt="paw"
       />
-      <Pager prev='/contact-me/' next='/about-me/'/>
+      <Pager prev='/cat/contact-me/' next='/cat/about-me/'/>
     </>
   );
 }

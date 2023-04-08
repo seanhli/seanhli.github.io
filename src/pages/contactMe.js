@@ -66,7 +66,7 @@ function ContactMe() {
           alt="paw"
         />
       </div>
-      <Pager prev='/projects/' next='/'/>
+      <Pager prev='/cat/projects/' next='/'/>
     </>
   );
 }
