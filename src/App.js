@@ -9,13 +9,18 @@ import AboutMe from "./pages/aboutMe";
 import Experiences from "./pages/experiences";
 import Projects from "./pages/projects";
 import ContactMe from "./pages/contactMe";
+import MainPage from "./pro_ver/mainPage";
+import SideNav from "./pro_ver/sideNav";
+import MainFooter from "./pro_ver/footer";
+import ProBackground from "./pro_ver/proBackground";
 
 function App() {
 
   return (
     <HashRouter>
       <Routes>
-        <Route path="/" element={<></>}>
+        {/* Main ver of site */}
+        <Route path="/" element={<><MainPage/><ProBackground/><SideNav/><MainFooter/></>}>
           <Route path="profile" element={<></>}/>
         </Route>
         {/* Route for fun cat version of personal site */}

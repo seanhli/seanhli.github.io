@@ -17,7 +17,7 @@
   display: flexbox;
   width: max(200px, 50vw);
   padding: max(0.75vmax, 3.5px) max(1vmax, 5px);
-  background-image: url("../assets/graphy-dark.png");
+  background-image: url("../../assets/graphy-dark.png");
   background-repeat: repeat;
   background-position: 20% 10%;
   box-shadow: 4px 7px 8px rgba(0, 0, 0, 0.5);

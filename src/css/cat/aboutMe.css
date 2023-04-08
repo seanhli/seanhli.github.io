@@ -56,7 +56,7 @@
   justify-content: center;
   box-shadow: 1px 1px 1px var(--shadow);
   background-color: var(--dark);
-  background-image: url("../assets/lined-paper-2.png");
+  background-image: url("../../assets/lined-paper-2.png");
   color: white;
   animation: howcansheslap 0.35s ease-out;
 }
@@ -163,7 +163,7 @@
   border-radius: 1vh;
   padding: max(5px, 1.5vh) max(10px, 2vh);
   background-color: rgb(133, 99, 36);
-  background-image: url("../assets/dark-wood-horizontal.png");
+  background-image: url("../../assets/dark-wood-horizontal.png");
   background-size: 100%;
   filter: drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.6));
 }
@@ -185,7 +185,7 @@
   max-height: 60vw;
   width: max(20px, 3vw);
   background-color: rgb(133, 99, 36);
-  background-image: url("../assets/dark-wood.png");
+  background-image: url("../../assets/dark-wood.png");
 }
 
 @keyframes rotatopotato {
