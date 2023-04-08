@@ -146,7 +146,7 @@ function Experiences() {
           </div>
         </div>
       )}
-      <Pager prev='/cat/about-me/' next='/cat/projects/'/>
+      <Pager prev='/about-me/' next='/projects/'/>
     </>
   );
 }

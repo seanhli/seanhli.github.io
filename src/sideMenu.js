@@ -70,7 +70,7 @@ function SideMenu() {
         className="menu-item"
         onClick={() => {
           dispatch(toggleExiting(true));
-          dispatch(changeNextPage("/cat/about-me/"));
+          dispatch(changeNextPage("/about-me/"));
         }}
       >
         <img
@@ -91,7 +91,7 @@ function SideMenu() {
         className="menu-item"
         onClick={() => {
           dispatch(toggleExiting(true));
-          dispatch(changeNextPage("/cat/experiences/"));
+          dispatch(changeNextPage("/experiences/"));
         }}
       >
         <img
@@ -112,7 +112,7 @@ function SideMenu() {
         className="menu-item"
         onClick={() => {
           dispatch(toggleExiting(true));
-          dispatch(changeNextPage("/cat/projects/"));
+          dispatch(changeNextPage("/projects/"));
         }}
       >
         <img
@@ -133,7 +133,7 @@ function SideMenu() {
         className="menu-item"
         onClick={() => {
           dispatch(toggleExiting(true));
-          dispatch(changeNextPage("/cat/contact-me/"));
+          dispatch(changeNextPage("/contact-me/"));
         }}
       >
         <img

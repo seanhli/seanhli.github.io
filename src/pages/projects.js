@@ -138,7 +138,7 @@ function Projects() {
           );
         })}
       </div>
-      <Pager prev='/cat/experiences/' next='/cat/contact-me/'/>
+      <Pager prev='/experiences/' next='/contact-me/'/>
     </>
   );
 }

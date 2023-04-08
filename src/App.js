@@ -14,19 +14,21 @@ function App() {
 
   return (
     <HashRouter>
-      <Routes>
-        <Route path="/" element={<></>}>
-          <Route path="profile" element={<></>}/>
-        </Route>
-        {/* Route for fun cat version of personal site */}
-        <Route path="/cat/" element={<><MainDisplay/><Background/><SideMenu/><LightSwitch/><Footer/></>}>
-          <Route index element={<Landing/>}/>
-          <Route path="about-me" element={<AboutMe/>}/>
-          <Route path="experiences" element={<Experiences/>}/>
-          <Route path="projects" element={<Projects/>}/>
-          <Route path="contact-me" element={<ContactMe/>}/>
-        </Route>
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<MainDisplay/>}>
+            <Route index element={<Landing/>}/>
+            <Route path="about-me" element={<AboutMe/>}/>
+            <Route path="experiences" element={<Experiences/>}/>
+            <Route path="projects" element={<Projects/>}/>
+            <Route path="contact-me" element={<ContactMe/>}/>
+          </Route>
+        </Routes>
+      </main>
+      <Background/>
+      <SideMenu/>
+      <LightSwitch/>
+      <Footer/>
     </HashRouter>
   );
 }

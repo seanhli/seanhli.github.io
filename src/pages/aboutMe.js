@@ -87,7 +87,7 @@ function AboutMe() {
           <div className="stick"></div>
         </div>
       )}
-      <Pager prev='/cat/' next='/cat/experiences/'/>
+      <Pager prev='/' next='/experiences/'/>
     </>
   );
 }

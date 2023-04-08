@@ -32,7 +32,7 @@ img {
   -o-user-drag: none;
 }
 
-.cat-main-display {
+main {
   position: absolute;
   left: max(4vw, 9vh);
   right: max(4vw, 9vh);
