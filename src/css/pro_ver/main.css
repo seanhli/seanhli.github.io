@@ -95,7 +95,7 @@
 
 @keyframes hex-blink {
   50% {
-    opacity: 0.25;
+    opacity: 0.10;
   }
 }
 
@@ -134,14 +134,14 @@
   top: 14vh;
   width: 28vh;
   height: 28vh;
-  animation: hex-move-right 21s infinite linear, hex-blink 10s infinite ease;
+  animation: hex-move-right 16s infinite linear, hex-blink 10s infinite ease;
 }
 
 .hex-1:nth-child(3) {
   top: 16vh;
   width: 14vh;
   height: 14vh;
-  animation: hex-move-right 21s infinite linear, hex-blink 6s infinite ease;
+  animation: hex-move-right 16s infinite linear, hex-blink 6s infinite ease;
 }
 
 .hex-2:nth-child(10) {
@@ -149,7 +149,7 @@
   margin-left: -2vh;
   width: 16vh;
   height: 16vh;
-  animation: hex-move-right 21s infinite linear, hex-blink 8s infinite ease;
+  animation: hex-move-right 16s infinite linear, hex-blink 8s infinite ease;
 }
 
 .hex-1:nth-child(4) {
