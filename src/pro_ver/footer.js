@@ -2,19 +2,19 @@ function MainFooter() {
   return (
     <>
       <div className="p-footer">
-        <div className="p-footer-contact">
-            contact.sean.h.li@gmail.com
+        <div className="p-footer-icons">
+          <span className="p-footer-contact-info">contact me ⟶</span>
+          <div className="p-footer-item">
             <img
-              className="p-email-clipboard"
-              src={require(`../assets/clipboard.png`)}
-              alt="copy-email"
+              src={require("../assets/mail.png")}
+              alt="email"
               title="copy email to clipboard"
+              className="p-footer-icon"
               onClick={() => {
                 navigator.clipboard.writeText("contact.sean.h.li@gmail.com");
               }}
             />
-        </div>
-        <div className="p-footer-icons">
+          </div>
           <div className="p-footer-item">
             <a
               href="https://github.com/seanhli"

@@ -1,13 +1,99 @@
+/* main content */
+
+.p-main-content {
+  font-family: "Roboto Mono";
+  color: white;
+}
+
 /* side nav */
 
 .p-side-nav {
   position: fixed;
+  font-family: "Roboto Mono";
+  color: white;
   z-index: 10;
-  width: max(60px, 3vw);
+  width: 60px;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.4);
   border-right: 1px solid white;
   box-shadow: 1px 0 10px -1px rgba(0, 0, 0, 0.5);
+}
+
+.p-side-nav-content {
+  position: relative;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4vh;
+}
+
+.p-nav-icon-description {
+  display: none;
+  position: absolute;
+  left: 45px;
+  top: -2px;
+  width: 200px;
+  overflow: hidden;
+}
+
+.connecting-segment {
+  position: relative;
+  top: 18px;
+  height: 3px;
+  width: 30px;
+  background-color: white;
+}
+
+.description-box {
+  position: relative;
+  left: 30px;
+  height: 30px;
+  width: max-content;
+  padding: 2px 7px;
+  border: 3px solid white;
+  border-radius: 5px;
+}
+
+.p-side-nav-icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  filter: saturate(0);
+}
+
+.p-side-nav-icon:hover {
+  filter: saturate(0) drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.6));
+}
+
+.p-side-nav-icon:hover .p-nav-icon-description {
+  display: block;
+  animation: description-appear 0.5s ease-out;
+}
+
+@keyframes description-appear {
+  0% {
+    width: 0;
+  }
+}
+
+.p-side-nav-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.p-side-nav-logo {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  width: 60px;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  background-image: url("../../assets/logo2.png");
+  background-size: cover;
+  cursor: pointer;
+  filter: invert(1);
 }
 
 /* footer */
@@ -21,14 +107,12 @@
   border-top: 1px solid white;
 }
 
-.p-footer-contact {
-  position: absolute;
-  left: max(80px, 4vw);
-  display: flex;
-  height: 100%;
-  align-items: center;
-  color: white;
-  gap: 6px;
+.p-footer-contact-info {
+  font-family: "Roboto Mono";
+  font-weight: 600;
+  font-size: 14px;
+  color: black;
+  cursor: default;
 }
 
 .p-email-clipboard {
@@ -41,6 +125,7 @@
   position: absolute;
   right: 12px;
   height: 100%;
+  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -95,7 +180,7 @@
 
 @keyframes hex-blink {
   50% {
-    opacity: 0.10;
+    opacity: 0.1;
   }
 }
 
