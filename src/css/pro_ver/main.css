@@ -124,6 +124,7 @@
 
 .hex-1:nth-child(1) {
   top: 3vh;
+  left: 35vw;
   width: 8vh;
   height: 8vh;
   animation: hex-move-right 14s infinite linear, hex-blink 8s infinite ease;
@@ -144,15 +145,16 @@
 }
 
 .hex-2:nth-child(10) {
-  top: 20vh;
-  margin-left: -5vh;
-  width: 20vh;
-  height: 20vh;
+  top: 22vh;
+  margin-left: -2vh;
+  width: 16vh;
+  height: 16vh;
   animation: hex-move-right 21s infinite linear, hex-blink 8s infinite ease;
 }
 
 .hex-1:nth-child(4) {
   top: 41vh;
+  left: 20vw;
   width: 12vh;
   height: 12vh;
   animation: hex-move-right 22s infinite linear, hex-blink 6s infinite ease;
@@ -160,6 +162,7 @@
 
 .hex-1:nth-child(5) {
   top: 62vh;
+  left: -10vw;
   width: 20vh;
   height: 20vh;
   animation: hex-move-right 18s infinite linear, hex-blink 10s infinite ease;
@@ -167,6 +170,7 @@
 
 .hex-1:nth-child(6) {
   top: 88vh;
+  left: 30vw;
   width: 6vh;
   height: 6vh;
   animation: hex-move-right 16s infinite linear, hex-blink 16s infinite ease;
