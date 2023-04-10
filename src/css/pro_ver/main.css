@@ -1,63 +1,196 @@
-.p-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(180, 180, 180, 0.4);
-}
+/* side nav */
 
 .p-side-nav {
-    position: fixed;
-    width: max(60px,3vw);
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-right: 1px solid black;
+  position: fixed;
+  z-index: 10;
+  width: max(60px, 3vw);
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-right: 1px solid white;
+  box-shadow: 1px 0 10px -1px rgba(0, 0, 0, 0.5);
 }
 
 /* footer */
 
 .p-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-    height: 60px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-top: 1px solid black;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-top: 1px solid white;
 }
 
 .p-footer-contact {
-    position: absolute;
-    left: max(80px,4vw);
-    display: flex;
-    height: 100%;
-    align-items: center;
-    color: white;
-    gap: 6px;
+  position: absolute;
+  left: max(80px, 4vw);
+  display: flex;
+  height: 100%;
+  align-items: center;
+  color: white;
+  gap: 6px;
 }
 
 .p-email-clipboard {
-    height: 20px;
-    cursor: pointer;
-    filter: invert(1)
+  height: 20px;
+  cursor: pointer;
+  filter: invert(1);
 }
 
 .p-footer-icons {
-    position: absolute;
-    right: 12px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    filter: invert(1) saturate(0);
+  position: absolute;
+  right: 12px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  filter: invert(1) saturate(0);
 }
 
 .p-footer-item {
-    width: 35px;
-    height: 35px;
+  width: 35px;
+  height: 35px;
 }
 
 .p-footer-icon {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+/* background */
+
+.p-background-container {
+  filter: invert(1);
+}
+
+.p-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../assets/pastelclouds.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: bg-hue-rotate 120s ease infinite;
+}
+
+@keyframes bg-hue-rotate {
+  25% {
+    filter: hue-rotate(-90deg);
+  }
+  75% {
+    filter: hue-rotate(90deg);
+  }
+}
+
+@keyframes hex-move-right {
+  0% {
+    transform: translateX(-40vw);
+  }
+  100% {
+    transform: translateX(140vw);
+  }
+}
+
+@keyframes hex-blink {
+  50% {
+    opacity: 0.25;
+  }
+}
+
+.p-animated-hexes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hex-1 {
+  position: absolute;
+  background-image: url("../../assets/hex1.png");
+  background-size: cover;
+  opacity: 0;
+}
+
+.hex-2 {
+  position: absolute;
+  background-image: url("../../assets/hex2.png");
+  background-size: cover;
+  opacity: 0;
+}
+
+.hex-1:nth-child(1) {
+  top: 3vh;
+  width: 8vh;
+  height: 8vh;
+  animation: hex-move-right 14s infinite linear, hex-blink 8s infinite ease;
+}
+
+.hex-2:nth-child(2) {
+  top: 14vh;
+  width: 28vh;
+  height: 28vh;
+  animation: hex-move-right 21s infinite linear, hex-blink 10s infinite ease;
+}
+
+.hex-1:nth-child(3) {
+  top: 16vh;
+  width: 14vh;
+  height: 14vh;
+  animation: hex-move-right 21s infinite linear, hex-blink 6s infinite ease;
+}
+
+.hex-2:nth-child(10) {
+  top: 20vh;
+  margin-left: -5vh;
+  width: 20vh;
+  height: 20vh;
+  animation: hex-move-right 21s infinite linear, hex-blink 8s infinite ease;
+}
+
+.hex-1:nth-child(4) {
+  top: 41vh;
+  width: 12vh;
+  height: 12vh;
+  animation: hex-move-right 22s infinite linear, hex-blink 6s infinite ease;
+}
+
+.hex-1:nth-child(5) {
+  top: 62vh;
+  width: 20vh;
+  height: 20vh;
+  animation: hex-move-right 18s infinite linear, hex-blink 10s infinite ease;
+}
+
+.hex-1:nth-child(6) {
+  top: 88vh;
+  width: 6vh;
+  height: 6vh;
+  animation: hex-move-right 16s infinite linear, hex-blink 16s infinite ease;
+}
+
+.hex-2:nth-child(7) {
+  top: 72vh;
+  width: 18vh;
+  height: 18vh;
+  animation: hex-move-right 28s infinite linear, hex-blink 10s infinite ease;
+}
+
+.hex-2:nth-child(8) {
+  top: 78vh;
+  margin-left: 6vh;
+  width: 14vh;
+  height: 14vh;
+  animation: hex-move-right 28s infinite linear, hex-blink 12s infinite ease;
+}
+
+.hex-2:nth-child(9) {
+  top: 76vh;
+  margin-left: -4vh;
+  width: 20vh;
+  height: 20vh;
+  animation: hex-move-right 28s infinite linear, hex-blink 8s infinite ease;
 }
