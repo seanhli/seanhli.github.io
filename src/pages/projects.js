@@ -12,7 +12,7 @@ function Projects() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (nextPage === "/projects/") {
+    if (nextPage === "/cat/projects/") {
       dispatch(toggleExiting());
     } else if (exiting) {
       exit(nextPage);

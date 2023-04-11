@@ -12,7 +12,7 @@ function ContactMe() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (nextPage === "/contact-me/") {
+    if (nextPage === "/cat/contact-me/") {
       dispatch(toggleExiting());
     } else if (exiting) {
       exit(nextPage);

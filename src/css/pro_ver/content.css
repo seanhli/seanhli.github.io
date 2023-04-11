@@ -1,0 +1,40 @@
+.p-title-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  animation: typing-title 2.5s steps(60, end) forwards;
+}
+
+.p-title {
+  width: max-content;
+  font-weight: 600;
+  font-size: max(30px, 8vmin);
+}
+
+.p-subtitle {
+  margin-bottom: max(5px, 3vmin);
+  font-size: max(14px, 2.5vmin);
+}
+
+.p-pager {
+  cursor: pointer;
+}
+
+.p-pager:hover {
+    filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.8));
+}
+
+@keyframes typing-title {
+  0% {
+    width: 0;
+  }
+}
+
+.p-content-container {
+  position: relative;
+  width: calc(100%);
+  height: calc(100% - 8vmin - 12vmin);
+  font-size: max(14px, 2.5vmin);
+  overflow: auto;
+  /* background-color: rgba(255, 255, 255, 0.212); */
+}

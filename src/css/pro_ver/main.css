@@ -1,8 +1,15 @@
 /* main content */
 
 .p-main-content {
+  position: fixed;
+  left: calc(60px + 5vmin);
+  top: 30px;
+  z-index: 1;
+  width: calc(100vw - 60px - 10vmin);
+  height: calc(100vh - 120px);
   font-family: "Roboto Mono";
   color: white;
+  overflow: hidden;
 }
 
 /* side nav */
@@ -31,7 +38,7 @@
 .p-nav-icon-description {
   display: none;
   position: absolute;
-  left: 45px;
+  left: 40px;
   top: -2px;
   width: 200px;
   overflow: hidden;
@@ -53,11 +60,12 @@
   padding: 2px 7px;
   border: 3px solid white;
   border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .p-side-nav-icon {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   cursor: pointer;
   filter: saturate(0);
 }
@@ -100,6 +108,7 @@
 
 .p-footer {
   position: fixed;
+  z-index: 9;
   bottom: 0;
   width: 100vw;
   height: 60px;

@@ -4,6 +4,7 @@ import App from "./App";
 import { store } from "./store/store";
 import { Provider } from "react-redux";
 import "./css/pro_ver/main.css";
+import "./css/pro_ver/content.css";
 import "./css/cat/main.css";
 import "./css/cat/sideMenu.css";
 import "./css/cat/footer.css";

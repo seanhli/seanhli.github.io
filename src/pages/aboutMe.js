@@ -16,7 +16,7 @@ function AboutMe() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (nextPage === "/about-me/") {
+    if (nextPage === "/cat/about-me/") {
       dispatch(toggleExiting());
     } else if (exiting) {
       exit(nextPage);

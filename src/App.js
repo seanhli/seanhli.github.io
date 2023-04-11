@@ -13,6 +13,9 @@ import MainPage from "./pro_ver/mainPage";
 import SideNav from "./pro_ver/sideNav";
 import MainFooter from "./pro_ver/footer";
 import ProBackground from "./pro_ver/proBackground";
+import MainAboutMe from "./pro_ver/mainAboutMe";
+import MainExperiences from "./pro_ver/mainExperiences";
+import MainProjects from "./pro_ver/mainProjects";
 
 function App() {
 
@@ -21,7 +24,9 @@ function App() {
       <Routes>
         {/* Main ver of site */}
         <Route path="/" element={<><MainPage/><ProBackground/><SideNav/><MainFooter/></>}>
-          <Route path="profile" element={<></>}/>
+          <Route index element={<><MainAboutMe/></>}/>
+          <Route path="experiences" element={<MainExperiences/>}/>
+          <Route path="projects" element={<MainProjects/>}/>
         </Route>
         {/* Route for fun cat version of personal site */}
         <Route path="/cat/" element={<><MainDisplay/><Background/><SideMenu/><LightSwitch/><Footer/></>}>

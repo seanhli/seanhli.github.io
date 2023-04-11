@@ -13,7 +13,7 @@ function Experiences() {
   const [focus, setFocus] = useState(false);
 
   useEffect(() => {
-    if (nextPage === "/experiences/") {
+    if (nextPage === "/cat/experiences/") {
       dispatch(toggleExiting());
     } else if (exiting) {
       exit(nextPage);
