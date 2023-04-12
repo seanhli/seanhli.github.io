@@ -16,6 +16,7 @@ import ProBackground from "./pro_ver/proBackground";
 import MainAboutMe from "./pro_ver/mainAboutMe";
 import MainExperiences from "./pro_ver/mainExperiences";
 import MainProjects from "./pro_ver/mainProjects";
+import MainHome from "./pro_ver/mainHome";
 
 function App() {
 
@@ -24,7 +25,8 @@ function App() {
       <Routes>
         {/* Main ver of site */}
         <Route path="/" element={<><MainPage/><ProBackground/><SideNav/><MainFooter/></>}>
-          <Route index element={<><MainAboutMe/></>}/>
+          <Route index element={<MainHome/>}/>
+          <Route path="about-me" element={<MainAboutMe/>}/>
           <Route path="experiences" element={<MainExperiences/>}/>
           <Route path="projects" element={<MainProjects/>}/>
         </Route>

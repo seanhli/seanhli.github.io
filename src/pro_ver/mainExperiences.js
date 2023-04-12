@@ -122,7 +122,7 @@ function MainExperiences() {
       <div className="p-title-container">
         <div className="p-title">my experiences</div>
       </div>
-      <Subtitle prev="/" next="/projects/" />
+      <Subtitle prev="/about-me/" next="/projects/" />
       <div className="p-content-container">
         <div className="p-exp-board">
           {content.map((tcd) => {

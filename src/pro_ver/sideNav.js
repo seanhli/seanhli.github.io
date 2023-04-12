@@ -20,6 +20,21 @@ function SideNav() {
               }
             }}
           >
+            <img src={require("../assets/home.png")} alt="home" />
+            <div className="p-nav-icon-description">
+              <div className="connecting-segment"></div>
+              <div className="description-box">home page</div>
+            </div>
+          </div>
+          <div
+            className="p-side-nav-icon"
+            onClick={() => {
+              if (nextPage !== "/about-me/") {
+                dispatch(toggleExiting(true));
+                dispatch(changeNextPage("/about-me/"));
+              }
+            }}
+          >
             <img src={require("../assets/about-me-color.png")} alt="about me" />
             <div className="p-nav-icon-description">
               <div className="connecting-segment"></div>

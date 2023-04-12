@@ -13,7 +13,7 @@ function MainAboutMe() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (nextPage === "/") {
+    if (nextPage === "/about-me/") {
       dispatch(toggleExiting());
       const entranceAnim = mainContentEntrance();
       entranceAnim.play();
@@ -37,7 +37,7 @@ function MainAboutMe() {
       <div className="p-title-container">
         <div className="p-title">about SEAN LI</div>
       </div>
-      <Subtitle prev="/projects/" next="/experiences/" />
+      <Subtitle prev="/" next="/experiences/" />
       <div className="p-content-container">
         <div className="about-me-grid">
           <div className="about-me-desc">
