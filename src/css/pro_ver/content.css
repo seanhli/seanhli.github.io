@@ -48,6 +48,7 @@
   height: 100%;
   align-items: center;
   overflow: auto;
+  row-gap: 60px;
 }
 
 .home-text {
@@ -55,19 +56,28 @@
 }
 
 .home-title {
-  width: max(35vw, 280px);
+  width: fit-content;
   font-size: max(16vmin, 60px);
   overflow: hidden;
   white-space: nowrap;
-  animation: typing-title 0.75s steps(20, end);
+  animation: typing-title-2 1s steps(20, end);
 }
 
 .home-subtitle {
-  width: max(35vw, 280px);
+  width: fit-content;
   font-size: max(3.5vmin, 14px);
   overflow: hidden;
   white-space: nowrap;
-  animation: typing-title 0.75s steps(20, end) 1s both;
+  animation: typing-title-2 1s steps(20, end) 1s both;
+}
+
+@keyframes typing-title-2 {
+  0% {
+    max-width: 0;
+  }
+  100% {
+    max-width: max(50vw, 500px);
+  }
 }
 
 .home-hex-navi {
