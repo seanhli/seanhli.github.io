@@ -1,10 +1,11 @@
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toggleExiting, changeNextPage } from "../store/exitAnimationSlice";
 
 function SideNav() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const nextPage = useSelector((state) => state.exitAnimationSlice.nextPage);
 
   return (
     <>
@@ -13,8 +14,10 @@ function SideNav() {
           <div
             className="p-side-nav-icon"
             onClick={() => {
-              dispatch(toggleExiting(true));
-              dispatch(changeNextPage("/"));
+              if (nextPage !== "/") {
+                dispatch(toggleExiting(true));
+                dispatch(changeNextPage("/"));
+              }
             }}
           >
             <img src={require("../assets/about-me-color.png")} alt="about me" />
@@ -26,8 +29,10 @@ function SideNav() {
           <div
             className="p-side-nav-icon"
             onClick={() => {
-              dispatch(toggleExiting(true));
-              dispatch(changeNextPage("/experiences/"));
+              if (nextPage !== "/experiences/") {
+                dispatch(toggleExiting(true));
+                dispatch(changeNextPage("/experiences/"));
+              }
             }}
           >
             <img
@@ -42,8 +47,10 @@ function SideNav() {
           <div
             className="p-side-nav-icon"
             onClick={() => {
-              dispatch(toggleExiting(true));
-              dispatch(changeNextPage("/projects/"));
+              if (nextPage !== "/projects/") {
+                dispatch(toggleExiting(true));
+                dispatch(changeNextPage("/projects/"));
+              }
             }}
           >
             <img src={require("../assets/projects-color.png")} alt="projects" />

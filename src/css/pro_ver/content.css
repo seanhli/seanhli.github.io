@@ -2,7 +2,7 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  animation: typing-title 2.5s steps(60, end) forwards;
+  animation: typing-title 2.5s steps(50, end) forwards;
 }
 
 .p-title {
@@ -21,7 +21,7 @@
 }
 
 .p-pager:hover {
-    filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.8));
+  filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.8));
 }
 
 @keyframes typing-title {
@@ -38,3 +38,107 @@
   overflow: auto;
   /* background-color: rgba(255, 255, 255, 0.212); */
 }
+
+/* ABOUT ME PAGE */
+
+.about-me-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: max(5%, 10px);
+}
+
+.about-me-desc {
+  width: max(65%, 280px);
+  font-weight: 600;
+  line-height: 1.9;
+}
+
+.p-about-me-photo {
+  max-height: 55vh;
+  max-width: max(30%, 280px);
+  border: 3px solid white;
+  border-radius: 10px;
+  filter: saturate(0.8);
+}
+
+/* MY EXPERIENCES PAGE */
+
+.p-exp-board {
+  display: flex;
+  flex-wrap: wrap;
+  height: calc(100% - max(6vh, 40px));
+  width: 100%;
+  gap: 2.5vmax;
+  overflow: auto;
+}
+
+.p-exp-post {
+  height: max(50%, 250px);
+  width: max(28%, 280px);
+  padding: max(10px, 1.5vh) max(10px, 1.5vh) max(10px, 1.5vh) max(10px, 1.5vh);
+  overflow-y: auto;
+  overflow-wrap: break-word;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid white;
+  border-radius: 1.5vh;
+  cursor: pointer;
+  box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.5);
+}
+
+.p-learn-more {
+  display: flex;
+  margin-top: max(1.25vh, 10px);
+  justify-content: center;
+  font-size: max(12px, 2.2vh);
+}
+
+.p-exp-post:hover {
+  border: 2px solid black;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: black;
+}
+
+.p-exp-post-title {
+  position: relative;
+  font-size: max(2.5vh, 20px);
+  line-height: 1.2;
+}
+
+.p-exp-post-content {
+  position: relative;
+  font-size: max(2.2vh, 17px);
+}
+
+.p-exp-post-date {
+  font-size: max(1.75vh, 14px);
+}
+
+.p-main-content .focus-bg {
+  position: fixed;
+  bottom: 60px;
+  left: 60px;
+  width: calc(100% - 60px);
+  height: calc(100% - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.85);
+  animation: appear 0.25s linear;
+  cursor: pointer;
+}
+
+.p-focus-card {
+  height: max(30vmax, 600px);
+  max-height: 100vh;
+  width: max(30vmax, 200px);
+  padding: max(15px, 2.5vh) max(20px, 3vh);
+  overflow-y: auto;
+  overflow-wrap: break-word;
+  background-color: rgb(51, 67, 87);
+  border-radius: 3vh;
+  box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+
+/* MY PROJECTS PAGE */
