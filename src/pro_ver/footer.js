@@ -12,6 +12,7 @@ function MainFooter() {
               className="p-footer-icon"
               onClick={() => {
                 navigator.clipboard.writeText("contact.sean.h.li@gmail.com");
+                alert("email copied to clipboard")
               }}
             />
           </div>
