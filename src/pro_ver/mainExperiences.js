@@ -158,7 +158,7 @@ function MainExperiences() {
               <div className="exp-d-post-content">
                 {detailContent[focus][1].map((item) => {
                   return (
-                    <li>
+                    <li key={item}>
                       <span className="li-text">{item}</span>
                     </li>
                   );

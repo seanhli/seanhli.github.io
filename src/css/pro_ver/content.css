@@ -140,5 +140,18 @@
   color: white;
 }
 
-
 /* MY PROJECTS PAGE */
+
+.p-projects-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: max(10px, 2vh);
+}
+
+.p-projects-container .project-card {
+    width: max(280px, 80%);
+    background-color: rgba(0, 0, 0, 0.4);
+}
