@@ -25,7 +25,7 @@ function AboutMe() {
 
   function exit(path) {
     const amExit = aboutMeExitAnimation();
-    amExit.play()
+    amExit.play();
     setTimeout(() => {
       dispatch(toggleExiting());
       navigate(path);
@@ -62,13 +62,12 @@ function AboutMe() {
           <div className="am-content">
             Sean graduated from Dartmouth College in 2017 and has been in the
             tech industry ever since. Whether as a consultant, product manager,
-            or now software engineer, Sean is a problem solver first. His
-            passion lies in building products that address real world needs and
-            have meaningful, measurable impact. While recently transitioned to
-            the role of software engineer, Sean already has years of
+            or software engineer, Sean is a problem solver first. His passion
+            lies in building products that address real world needs and have
+            meaningful, measurable impact. Through his journey at Mastercard,
+            Advertise Purple, and Hack Reactor, Sean has accrued years of
             professional experience coding, collaborating with software
-            engineers, and completing the Hack Reactor Advanced Software
-            Immersive Program with flying colors
+            engineers, and building products from scratch.
           </div>
         </div>
         <div className="tape-section"></div>
@@ -87,7 +86,7 @@ function AboutMe() {
           <div className="stick"></div>
         </div>
       )}
-      <Pager prev='/cat/' next='/cat/experiences/'/>
+      <Pager prev="/cat/" next="/cat/experiences/" />
     </>
   );
 }
